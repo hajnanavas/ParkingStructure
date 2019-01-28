@@ -13,7 +13,9 @@ router.get('/getStructures', function (req, res, next) {
     });
 });
 router.post('/addStructure', function (req, res, next) {
+
     Structure.addStructure(req.body, function (err, count) {
+        
         if (err) {
             res.json(err);
         }

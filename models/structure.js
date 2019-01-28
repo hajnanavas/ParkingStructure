@@ -18,8 +18,8 @@ var Structure = {
         var low = Structure.low;
         var medium = Structure.medium;
         var full = Structure.full;
-        
-        return db.query("Insert into structures values(id,structure_name,structure_type,total_space,occupied_space,color,status,latitude,longitude,hidden,low,medium,full)", ['',structureName, structureType, totalSpace, occupiedSpace, color, status, latitude, longitude, hidden, low, medium, full], callback);
+
+        return db.query("Insert into structures (id,structure_name,structure_type,total_space,occupied_space,color,status,latitude,longitude,hidden,low,medium,full) values (0,'" + structureName + "', '" + structureType + "','" + totalSpace + "','" + occupiedSpace + "', '" + color + "','" + status + "', '" + latitude + "', '" + longitude + "', '" + hidden + "', '" + low + "', '" + medium + "','" + full + "')", callback);
     }
 };
 module.exports = Structure;
